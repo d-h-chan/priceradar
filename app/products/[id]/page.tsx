@@ -12,6 +12,8 @@ type Props = {
   params: { id: string };
 };
 
+export const dynamic = "force-dynamic";
+
 // product id comes through nextjs from the [id] in url
 const ProductDetails = async ({ params: { id } }: Props) => {
   const product: Product = await getProductById(id);
